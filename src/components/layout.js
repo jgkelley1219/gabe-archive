@@ -4,49 +4,8 @@ import styled from "styled-components"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    const blogPath = `${__PATH_PREFIX__}/blog/`
+    const { children } = this.props
 
-    // if (location.pathname === rootPath || location.pathname === blogPath) {
-    //   header = (
-    //     <h1
-    //       style={{
-    //         marginTop: 0,
-    //       }}
-    //     >
-    //       <Link
-    //         style={{
-    //           boxShadow: `none`,
-    //           textDecoration: `none`,
-    //           color: `inherit`,
-    //         }}
-    //         to={location.pathname === blogPath ? `/blog/` : `/`}
-    //       >
-    //         {title}
-    //       </Link>
-    //     </h1>
-    //   )
-    // } else {
-    //   header = (
-    //     <h3
-    //       style={{
-    //         marginTop: 0,
-    //       }}
-    //     >
-    //       <Link
-    //         style={{
-    //           boxShadow: `none`,
-    //           textDecoration: `none`,
-    //           color: `inherit`,
-    //         }}
-    //         to={`/blog/`}
-    //       >
-    //         {title}
-    //       </Link>
-    //     </h3>
-    //   )
-    // }
     return (
       <Wrapper className="wrapper">
         <div
