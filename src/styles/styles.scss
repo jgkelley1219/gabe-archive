@@ -1,6 +1,6 @@
-$black: #101010;
-$white: #fff;
-$off-white: rgba($white,.4);
+$background: #fff;
+$foreground: #111;
+$accent: rgba($foreground,.6);
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -10,12 +10,12 @@ $off-white: rgba($white,.4);
 html {
   font-family: 'Libre Franklin';
   font-size: 16px;
-  background: $black;
-  color: $white;
+  background: $background;
+  color: $foreground;
 }
 
 a {
-  color: $white;
+  color: $foreground;
 }
 
 header {
@@ -30,10 +30,10 @@ header {
   a {
     position: relative;
     text-decoration: none;
-    color: $white;
+    color: $foreground;
     padding-bottom: .25rem;
     &.active {
-      border-bottom: 1px solid $off-white;
+      border-bottom: 1px solid $accent;
     }
   }
 }
@@ -49,13 +49,13 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 2rem;
   .date {
     p {
-      color: $off-white;
+      color: $accent;
     }
     margin-right: 1rem;
   }
   a {
     text-decoration: none;
-    color: $white;
+    color: $foreground;
   }
 }
 
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 40rem;
   &__body {
     margin-top: 1rem;
-    color: $off-white;
+    color: $accent;
     line-height: 2rem;
     p + * {
       margin-top: 1rem;
