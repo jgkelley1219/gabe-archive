@@ -1,0 +1,56 @@
+$black: #101010;
+$white: #fff;
+$off-white: rgba($white,.3);
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-family: 'Libre Franklin';
+  font-size: 16px;
+  background: $black;
+  color: $white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+
+  .nav__right a {
+    margin-left: 2rem;
+  }
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: $white;
+    padding-bottom: .25rem;
+    &.active {
+      border-bottom: 1px solid $off-white;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.blog-post {
+  display: flex;
+  margin-bottom: 2rem;
+  .date {
+    p {
+      color: $off-white;
+    }
+    margin-right: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
