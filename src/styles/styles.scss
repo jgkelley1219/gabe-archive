@@ -1,6 +1,6 @@
 $black: #101010;
 $white: #fff;
-$off-white: rgba($white,.3);
+$off-white: rgba($white,.4);
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -11,6 +11,10 @@ html {
   font-family: 'Libre Franklin';
   font-size: 16px;
   background: $black;
+  color: $white;
+}
+
+a {
   color: $white;
 }
 
@@ -52,5 +56,17 @@ h1, h2, h3, h4, h5, h6, p {
   a {
     text-decoration: none;
     color: $white;
+  }
+}
+
+.post-body {
+  max-width: 40rem;
+  &__body {
+    margin-top: 1rem;
+    color: $off-white;
+    line-height: 2rem;
+    p + * {
+      margin-top: 1rem;
+    }
   }
 }
