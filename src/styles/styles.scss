@@ -1,6 +1,6 @@
-$background: #fff;
-$foreground: #111;
-$accent: rgba($foreground,.6);
+$background: #111;
+$foreground: #fff;
+$accent: rgba($foreground,.2);
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -16,6 +16,10 @@ html {
 
 a {
   color: $foreground;
+}
+
+img {
+  width: 100%;
 }
 
 header {
@@ -68,5 +72,16 @@ h1, h2, h3, h4, h5, h6, p {
     p + * {
       margin-top: 1rem;
     }
+  }
+}
+
+.photo-post {
+  width: 100%;
+  margin-bottom: 16px;
+  @media screen and (min-width: 600px) {
+    max-width: calc(50% - 8px);
+  }
+  @media screen and (min-width: 1500px) {
+    max-width: calc(33% - 8px);
   }
 }
