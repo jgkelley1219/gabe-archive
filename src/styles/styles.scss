@@ -1,6 +1,6 @@
-$background: #111;
-$foreground: #fff;
-$accent: rgba($foreground,.2);
+$background: #E6EBE4;
+$foreground: #222;
+$accent: rgba($foreground,.8);
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -25,7 +25,7 @@ img {
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 6rem;
+  margin: 8rem 0;
 
   .nav__right a {
     margin-left: 2rem;
@@ -75,13 +75,40 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .photo-post {
   width: 100%;
   margin-bottom: 16px;
   @media screen and (min-width: 600px) {
-    max-width: calc(50% - 8px);
-  }
-  @media screen and (min-width: 1500px) {
     max-width: calc(33% - 8px);
+  }
+}
+
+
+.post-title {
+  font-family: 'Source Code Pro';
+  background: $foreground;
+  color: $background;
+  padding: 12px 16px;
+  margin: 0 12px 12px 0;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  display: inline-block;
+  text-decoration: underline;
+  &.writing {
+    background: #E0C565;
+    color: #222;
+  }
+  &.link {
+    background: #2A35F0;
+  }
+  &.photo{
+    background: $foreground;
   }
 }

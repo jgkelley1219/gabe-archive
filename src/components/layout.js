@@ -16,13 +16,7 @@ class Layout extends React.Component {
         >
           <header>
             <div className="nav__left">
-
               <h1><Link to={`/`}>Gabe Kelley</Link></h1>
-            </div>
-            <div className="nav__right">
-              <Link to={`/photos`} activeClassName="active">Photos</Link>
-              <Link to={`/blog`} activeClassName="active">Writing</Link>
-              <Link to={`/projects`} activeClassName="active">Projects</Link>
             </div>
           </header>
           <main>{children}</main>
@@ -35,7 +29,7 @@ class Layout extends React.Component {
 
 const Wrapper = styled.div`
   width: 85%;
-  margin: 8rem auto;
+  margin: 0 auto;
 `
 
 const Footer = styled.footer`

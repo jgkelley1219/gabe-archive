@@ -21,8 +21,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content/posts/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/posts/links`,
+        name: `links`,
       },
     },
     {
@@ -35,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/photos`,
+        path: `${__dirname}/content/posts/photos`,
         name: `photos`,
       },
     },
@@ -92,7 +99,8 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'Libre Franklin'
+          'Libre Franklin',
+          'Source Code Pro',
         ],
         display: 'swap'
       }

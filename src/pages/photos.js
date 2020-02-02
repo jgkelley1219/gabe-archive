@@ -1,15 +1,9 @@
 import React from "react"
 import Img from "react-image"
-import Masonry from "react-masonry-component"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
-const masonryOptions = {
-  gutter: 16,
-  transitionDuration: 1
-}
 
 class Photos extends React.Component {
   render() {
@@ -19,17 +13,16 @@ class Photos extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Masonry
-          options={masonryOptions}>
-          {posts.map(({ node }) => {
-            return (
-              <div className="photo-post" key={ node.name }>
-                <Img src={ node.publicURL } />
-              </div>
-            )
-          })}
-        </Masonry>
+      <SEO title="All posts" />
+        <div className="photos">
+            {posts.map(({ node }) => {
+              return (
+                <div className="photo-post" key={ node.name }>
+                  <Img src={ node.publicURL } />
+                </div>
+              )
+            })}
+        </div>
       </Layout>
     )
   }
