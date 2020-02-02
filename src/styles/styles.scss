@@ -48,6 +48,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+h2 {
+  opacity: 0.5;
+}
+
 .blog-post {
   display: flex;
   margin-bottom: 2rem;

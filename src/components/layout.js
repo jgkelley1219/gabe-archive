@@ -1,10 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import Header from "./header"
+
+
 
 class Layout extends React.Component {
   render() {
-    const { children } = this.props
+    const { children, data } = this.props
 
     return (
       <Wrapper className="wrapper">
@@ -14,11 +17,7 @@ class Layout extends React.Component {
             marginRight: `auto`,
           }}
         >
-          <header>
-            <div className="nav__left">
-              <h1><Link to={`/`}>Gabe Kelley</Link></h1>
-            </div>
-          </header>
+          <Header />
           <main>{children}</main>
         </div>
         <Footer></Footer>
