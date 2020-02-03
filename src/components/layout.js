@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Header from "./header"
 
@@ -7,7 +6,7 @@ import Header from "./header"
 
 class Layout extends React.Component {
   render() {
-    const { children, data } = this.props
+    const { children } = this.props
 
     return (
       <Wrapper className="wrapper">

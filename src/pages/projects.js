@@ -29,17 +29,19 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allFile {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
-          frontmatter {
-            date(formatString: "YYYY")
-            title
-            description
+          childMdx {
+            excerpt
+            frontmatter {
+              date(formatString: "YYYY")
+              title
+              description
+            }
           }
         }
       }
